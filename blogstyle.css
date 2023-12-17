@@ -68,15 +68,7 @@ h6 {
 
 
 
-.quote {
-  border-bottom: 2px solid rgba(0, 0, 0, 0.5);
-  font-weight:100;
-  font-size: 100%;
-  font-weight: 800;
-  line-height: 20px;
-  padding-top: 1%;
-  padding-bottom: 10px;
-}
+
 
 
   
@@ -325,8 +317,7 @@ a {
   }
   
   .content .main-content .post .post-image {
-    width: 38%;
-    height: 100%;
+    width: 300px;
     float: left;
     border-top-left-radius: 5px;
     border-bottom-left-radius: 5px;
@@ -335,6 +326,7 @@ a {
   .content .main-content .post .post-preview {
     width: 60%;
     padding: 0px;
+    margin: 0px;
     float: right;
   }
   
