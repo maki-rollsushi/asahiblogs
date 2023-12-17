@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Asashi Blogs</title>
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+    integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Candal|Lora" rel="stylesheet">
+
+  <!-- Custom Styling -->
+  <link rel="stylesheet" href="blogstyle.css">
+
+  <!-- Slick Carousel CSS -->
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+
+  <!-- Slick Carousel Theme CSS -->
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
+
+</head>
+
+<body>
+  <header>
+    <div class="logo">
+      <h1 class="logo-text"><span>ASAHI'S</span> LATE NIGHT THOUGHTS</h1>
+    </div>
+    <ul class="nav">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+    </ul>
+  </header>
+
+
+    <div class='story'>
+
+      <img src='logo.png' class='logo-img'>
+      <h3 class='byline'>Kevin Miles Ramirez</h3>
+        <h1 class = 'blog-title'>Clash of Clans Game Review: Im broke but not because of the game</h1>
+
+        
+        <p>I will go into the review assuming that you already know what game im talking about. And if you already know it, then you have played it, and if you have played it, then you know the feeling. </p>
+
+        <p>It gets boring.</p>
+
+        <p>The game is heavily favored to players with deep pockets, its content leaning towards to two types of people. The rich and impatient, and the poor and patient. I am of the latter type. I have not spent a single cent on the game, and I can say I still had fun, but it wasn’t enough to keep me playing. It was not enough to make me blind towards the overall unfairness of it. </p>
+
+        <p>There is an unfortunate limit. And in my experience its town hall 12. There is only so much one player can do before they get smashed with a diamond hammer by another player. Does it mean that you cant have fun? Well it depends. You can, but one must realize that there is a limit to it.</p>
+
+        <p>You cant three star a town hall 12 with Town hall 11 troops. Of course there are exception but its of the one percent of players who are utter geniuses at strategy. The Napoleon of COC. The real life Napoleon. Not the pathetic little simp of a Napoleon by Ridley Scott.</p>
+
+        <p>If one wishes to succeed in the higher ladders of COC. Then one must have the patience of a Saint. The grit of a Roman warrior. And the intellect of Tesla. Just don’t go insane in the process like Tesla. Marrying a pigeon isn’t going to let you become No 1. in the leader boards. </p>
+
+        <p>Of course I'm exaggerating but if you can come close to it. Then there is hope. </p>
+
+        <p>Overall, if you simply want to have fun and have a competitive spirit, then its possible in the lower town halls. But anything above Town Hall 13, then you have to be ready to burn a hole through your wallet. </p>
+
+        <img src = 'image_8.png' class = image >
+        
+    </div>
+
+    <!-- // Page Wrapper -->
+
+
+
+
+  
+  
+    <!-- Simple JS animations -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="https://cdn.ckeditor.com/ckeditor5/40.0.1/classic/ckeditor.js"></script>
+  
+    <script>
+      $(document).ready(function () {
+        // Toggle menu
+        $(".menu-toggle").on("click", function () {
+          $(".nav").toggleClass("showing");
+          $(".nav ul").toggleClass("showing");
+        });
+  
+        // Slick Carousel
+        $(".post-wrapper").slick({
+          slidesToShow: 3,
+          slidesToScroll: 1,
+          autoplay: true,
+          autoplaySpeed: 2000,
+          nextArrow: $(".next"),
+          prevArrow: $(".prev"),
+          responsive: [
+            {
+              breakpoint: 1024,
+              settings: {
+                slidesToShow: 3,
+                slidesToScroll: 3,
+                infinite: true,
+                dots: true
+              }
+            },
+            {
+              breakpoint: 600,
+              settings: {
+                slidesToShow: 2,
+                slidesToScroll: 2
+              }
+            },
+            {
+              breakpoint: 480,
+              settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1
+              }
+            }
+          ]
+        });
+  
+        // CKEditor
+        ClassicEditor
+          .create(document.querySelector("#bodyEditor"), {
+            toolbar: [
+              "heading",
+              "|",
+              "bold",
+              "italic",
+              "link",
+              "bulletedList",
+              "numberedList",
+              "blockQuote"
+            ],
+            heading: {
+              options: [
+                { model: "paragraph", title: "Paragraph", class: "ck-heading_paragraph" },
+                {
+                  model: "heading1",
+                  view: "h1",
+                  title: "Heading 1",
+                  class: "ck-heading_heading1"
+                },
+                {
+                  model: "heading2",
+                  view: "h2",
+                  title: "Heading 2",
+                  class: "ck-heading_heading2"
+                }
+              ]
+            }
+          })
+          .catch(error => {
+            console.log(error);
+          });
+      });
+    </script>
+  
+  </body>
+
+
+
+  
