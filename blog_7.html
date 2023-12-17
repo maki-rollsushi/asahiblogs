@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Asashi Blogs</title>
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+    integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Candal|Lora" rel="stylesheet">
+
+  <!-- Custom Styling -->
+  <link rel="stylesheet" href="blogstyle.css">
+
+  <!-- Slick Carousel CSS -->
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+
+  <!-- Slick Carousel Theme CSS -->
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
+
+</head>
+
+<body>
+  <header>
+    <div class="logo">
+      <h1 class="logo-text"><span>ASAHI'S</span> LATE NIGHT THOUGHTS</h1>
+    </div>
+    <ul class="nav">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+    </ul>
+  </header>
+
+
+    <div class='story'>
+
+      <img src='logo.png' class='logo-img'>
+      <h3 class='byline'>Kevin Miles Ramirez</h3>
+        <h1 class = 'blog-title'>League of Legends Game Review: Just Don't</h1>
+
+        
+        <p>This game. This game is something else.</p>
+
+        <p>League of Legends is a MOBA game created by Riot Games in 2009, created by college kids in their basement. Eventually turning the game into a billion dollar sensation. A game that has hundreds of millions of players. And unlike other games, it has continued to thrive and prosper, moving on with the times instead of being left behind it.</p>
+
+        <p>Games like DOTA 2 and Counter Strike has existed longer than League of Legends, and yet their popularity as of late cannot compare to League. Just simply go to Twitch and look at the amount of viewers they all have, and compare the three. League dominates them and its not even close.</p>
+
+        <p>But i will judge it as a game. The TLDR of it is, fuck this game. </p>
+
+        <p>The game has been an addiciton of mine as tale as old as time, or more specifically when i was in elementary. I still remember the day when i was eligible to play ranked. It took me a year to get to that level, and back then it was a grind when you dont have a computer, and only have the ability to play it on Computer Shops. Everyday i grinded at it. And by everyday i mean EVERYDAY. </p>
+
+        <p>Until the day came, and I achieved it. I still remember it. I was about to be a sixth grader. It was in the morning. I just got done doing some things for school, and went straight ahead to the nearby computer shop. And it wasnt even that far, it was just in front of our school besides the seven eleven. </p>
+
+        <p>I played Annie. Though i forgot how i played, i did remember that i reached level 30. The max level in league you could achieve back then. It was the best of times. It was the worst of times. And did you see what I did there?</p>
+
+        <p>The game is addictive. Ask any player who played league longer than a year, and when asked if they ever thought of quitting the game, they would answer yes. But do they actually quit? Some do, like me, but in others, not so much. We League players like to say that we will quit the game in one moment, and continue playing ranked in another. Its a never ending toxic cycle. </p>
+
+        <p>The game was like a mistress that you had, and you know that its wrong but you still keep doing her. Until, eventually, your wife finds out and your life is over. Defeat, in league terms. </p>
+
+        <p>Piece of advice to the one reading this. Dont play the game. Dont be arrogant in thinking that you can stave off the addiction. Thats what every meth addict say. Thats what every person who was about to get an addiction would say. </p>
+
+        <img src = 'image_8.png' class = image >
+    </div>
+
+    <!-- // Page Wrapper -->
+
+
+
+
+  
+  
+    <!-- Simple JS animations -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="https://cdn.ckeditor.com/ckeditor5/40.0.1/classic/ckeditor.js"></script>
+  
+    <script>
+      $(document).ready(function () {
+        // Toggle menu
+        $(".menu-toggle").on("click", function () {
+          $(".nav").toggleClass("showing");
+          $(".nav ul").toggleClass("showing");
+        });
+  
+        // Slick Carousel
+        $(".post-wrapper").slick({
+          slidesToShow: 3,
+          slidesToScroll: 1,
+          autoplay: true,
+          autoplaySpeed: 2000,
+          nextArrow: $(".next"),
+          prevArrow: $(".prev"),
+          responsive: [
+            {
+              breakpoint: 1024,
+              settings: {
+                slidesToShow: 3,
+                slidesToScroll: 3,
+                infinite: true,
+                dots: true
+              }
+            },
+            {
+              breakpoint: 600,
+              settings: {
+                slidesToShow: 2,
+                slidesToScroll: 2
+              }
+            },
+            {
+              breakpoint: 480,
+              settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1
+              }
+            }
+          ]
+        });
+  
+        // CKEditor
+        ClassicEditor
+          .create(document.querySelector("#bodyEditor"), {
+            toolbar: [
+              "heading",
+              "|",
+              "bold",
+              "italic",
+              "link",
+              "bulletedList",
+              "numberedList",
+              "blockQuote"
+            ],
+            heading: {
+              options: [
+                { model: "paragraph", title: "Paragraph", class: "ck-heading_paragraph" },
+                {
+                  model: "heading1",
+                  view: "h1",
+                  title: "Heading 1",
+                  class: "ck-heading_heading1"
+                },
+                {
+                  model: "heading2",
+                  view: "h2",
+                  title: "Heading 2",
+                  class: "ck-heading_heading2"
+                }
+              ]
+            }
+          })
+          .catch(error => {
+            console.log(error);
+          });
+      });
+    </script>
+  
+  </body>
+
+
+
+  
